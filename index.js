@@ -6,10 +6,12 @@ const path = require('path');
 app.use(express.static('static'));
 
 app.get('/', (req, res) => {
+  console.log('ok');
   res.sendFile(path.resolve('pages/index.html'));
 });
 
 app.get('/debug', (req, res) => {
+  console.log('ok2');
   res.sendFile(path.resolve('pages/debug.html'));
 });
 
